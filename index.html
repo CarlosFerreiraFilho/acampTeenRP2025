@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Convite com Vídeo</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.video-bg iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 177.77vh; /* 100 * (16 / 9) para manter proporção */
+  height: 100vh;
+  transform: translate(-50%, -50%);
+  border: none;
+  pointer-events: none;
+}
+
+
+
+    .content {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 40px 30px;
+      border-radius: 12px;
+      max-width: 700px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: white;
+    }
+
+    p {
+      margin-top: 10px;
+      color: white;
+      font-size: 1.1rem;
+    }
+
+    .details {
+      margin-top: 30px;
+    }
+
+    .cta {
+      margin-top: 40px;
+    }
+
+    .cta a {
+      background: orange;
+      color: white;
+      text-decoration: none;
+      padding: 14px 28px;
+      font-size: 1rem;
+      border-radius: 8px;
+      transition: background 0.3s;
+      display: inline-block;
+    }
+
+    .cta a:hover {
+      background: orangered;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: white;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .container {
+        padding: 25px 20px;
+        max-width: 90%;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .cta a {
+        font-size: 0.95rem;
+        padding: 12px 24px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      .cta a {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="video-bg">
+    <iframe 
+      src="https://www.youtube.com/embed/1dhjZZyHd9k?autoplay=1&mute=1&loop=1&controls=0&playlist=1dhjZZyHd9k" 
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+    </iframe>
+    <div class="sobreposição"></div>
+  </div>
+  
+
+  <div class="content">
+    <div class="container">
+      <h1>Você está oficilamente convidado(a) para o louvor do Acamp Teen 2025!!</h1>
+      <p>Junte-se a nós para adorar e permitir que a Graça de Jesus Transborde em nossa vida!!</p>
+
+      <div class="cta">
+        <a href="https://chat.whatsapp.com/LNolQpAQ5OnBnDTonebjyX"target="_blank">Transbordar!</a>
+      </div>
+
+      <footer>
+        <p>@espacoteenrp</p>
+      </footer>
+    </div>
+  </div>
+
+</body>
+</html>
