@@ -14,30 +14,29 @@
     html, body {
       height: 100%;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow: hidden;
     }
 
     .video-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: -1;
-}
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
 
-.video-bg iframe {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 177.77vh; /* 100 * (16 / 9) para manter proporção */
-  height: 100vh;
-  transform: translate(-50%, -50%);
-  border: none;
-  pointer-events: none;
-}
-
-
+    .video-bg iframe {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 16 / 9;
+      transform: translate(-50%, -50%);
+      border: none;
+      pointer-events: none;
+    }
 
     .content {
       position: relative;
@@ -57,21 +56,27 @@
       width: 100%;
       text-align: center;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .container:hover {
+      transform: translateY(-10px);
     }
 
     h1 {
       font-size: 2.5rem;
       color: white;
+      transition: color 0.3s ease-in-out;
+    }
+
+    h1:hover {
+      color: #ff7f50; /* cor laranja suave */
     }
 
     p {
       margin-top: 10px;
       color: white;
       font-size: 1.1rem;
-    }
-
-    .details {
-      margin-top: 30px;
     }
 
     .cta {
@@ -85,12 +90,13 @@
       padding: 14px 28px;
       font-size: 1rem;
       border-radius: 8px;
-      transition: background 0.3s;
+      transition: background 0.3s, transform 0.3s;
       display: inline-block;
     }
 
     .cta a:hover {
       background: orangered;
+      transform: scale(1.1);
     }
 
     footer {
@@ -141,17 +147,16 @@
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
       allowfullscreen>
     </iframe>
-    <div class="sobreposição"></div>
   </div>
   
 
   <div class="content">
     <div class="container">
-      <h1>Você está oficilamente convidado(a) para o louvor do Acamp Teen 2025!!</h1>
-      <p>Junte-se a nós para adorar e permitir que a Graça de Jesus Transborde em nossa vida!!</p>
+      <h1>Você está oficialmente convidado(a) para o louvor do Acamp Teen 2025!!</h1>
+      <p>Junte-se a nós para adorar e permitir que a Graça de Jesus transborde em nossa vida!</p>
 
       <div class="cta">
-        <a href="https://chat.whatsapp.com/LNolQpAQ5OnBnDTonebjyX"target="_blank">Transbordar!</a>
+        <a href="https://chat.whatsapp.com/LNolQpAQ5OnBnDTonebjyX" target="_blank">Transbordar!</a>
       </div>
 
       <footer>
